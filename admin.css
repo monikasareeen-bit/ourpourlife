@@ -1,0 +1,428 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f4f6f9
+}
+
+.sidebar {
+    width: 220px;
+    position: fixed;
+    height: 100%;
+    background: #111;
+    color: #fff;
+    padding: 20px
+}
+
+.sidebar a {
+    color: #fff;
+    display: block;
+    margin: 10px 0;
+    text-decoration: none
+}
+
+.main {
+    margin-left: 240px;
+    padding: 20px
+}
+
+.cards {
+    display: flex;
+    gap: 20px
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px
+}
+
+table {
+    width: 100%;
+    background: #fff;
+    border-collapse: collapse
+}
+
+td,
+th {
+    padding: 10px;
+    border-bottom: 1px solid #ddd
+}
+
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh
+}
+
+.login-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px
+}
+/*
+ body { font-family: Arial; background:#f4f6f9; margin:0; padding:20px; }
+        h1 { margin-bottom:20px; }
+        .admin-nav { margin-bottom:20px; }
+        .admin-nav a { margin-right:15px; text-decoration:none; font-weight:bold; color:#2563eb; }
+        .admin-dashboard { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:20px; }
+        .admin-card { background:white; padding:20px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,.1); }
+        .admin-card h2 { margin:0; font-size:32px; color:#1f2937; }
+        .admin-card p { margin-top:5px; font-size:14px; color:#6b7280; }*/
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: linear-gradient(135deg, #f4f6f9, #eef2ff);
+    margin: 0;
+    padding: 30px;
+    color: #1f2937;
+}
+
+/* PAGE TITLE */
+h1 {
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* NAVIGATION */
+.admin-nav {
+    margin-bottom: 30px;
+    background: white;
+    padding: 14px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.admin-nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #4f46e5;
+    transition: color 0.2s;
+}
+
+.admin-nav a:hover {
+    color: #1e1b4b;
+}
+
+/* DASHBOARD GRID */
+.admin-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+/* CARDS */
+.admin-card {
+    background: white;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.admin-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6px;
+    width: 100%;
+    background: linear-gradient(90deg, #6366f1, #ec4899);
+}
+
+.admin-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 35px rgba(0,0,0,0.12);
+}
+
+/* BIG NUMBER */
+.admin-card h2 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 800;
+    color: #111827;
+}
+
+/* LABEL */
+.admin-card p {
+    margin-top: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #6b7280;
+}
+/* ================================
+   POSTS PAGE (Manage Blog Posts)
+================================ */
+
+.admin-body {
+    background: linear-gradient(135deg, #f4f6f9, #eef2ff);
+    min-height: 100vh;
+    padding: 40px;
+}
+
+/* Back link */
+.back-link {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #4f46e5;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Page title */
+.admin-title {
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: #111827;
+}
+
+/* Messages */
+.auth-error,
+.auth-success {
+    max-width: 900px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.auth-error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.auth-success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+/* Table wrapper feel */
+.admin-table {
+    max-width: 900px;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* Table header */
+.admin-table th {
+    background: #f1f5f9;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: #475569;
+    padding: 14px;
+}
+
+/* Table rows */
+.admin-table td {
+    padding: 14px;
+    font-size: 15px;
+    color: #1f2937;
+}
+
+/* Row hover */
+.admin-table tr:hover td {
+    background: #f8fafc;
+}
+
+/* Action button */
+.btn-delete {
+    background: #ef4444;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btn-delete:hover {
+    background: #dc2626;
+    transform: translateY(-1px);
+}
+
+/* Empty state */
+.admin-table td[colspan] {
+    color: #6b7280;
+    font-style: italic;
+}
+/* FIX TABLE COLUMN ALIGNMENT */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* 🔑 this fixes misalignment */
+}
+
+/* Header cells */
+.admin-table th {
+    text-align: left;
+    padding: 14px 16px;
+    font-weight: 700;
+}
+
+/* Data cells */
+.admin-table td {
+    padding: 14px 16px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* Center only ACTION column */
+.admin-table th:last-child,
+.admin-table td:last-child {
+    text-align: center;
+    width: 140px;
+}
+
+/* ID column width */
+.admin-table th:first-child,
+.admin-table td:first-child {
+    width: 80px;
+}
+/* ===============================
+   ADMIN REPLIES – FIXED & WORKING
+================================ */
+
+/* Page title */
+h1 {
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: #111827;
+}
+
+/* Table base */
+.admin-table {
+    width: 100%;
+    max-width: 1200px;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    border-collapse: collapse;
+    table-layout: fixed; /* 🔑 fixes column mismatch */
+}
+
+/* Header */
+.admin-table th {
+    background: #f1f5f9;
+    padding: 14px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #475569;
+    text-align: left;
+}
+
+/* Cells */
+.admin-table td {
+    padding: 14px 16px;
+    font-size: 14px;
+    color: #1f2937;
+    border-top: 1px solid #e5e7eb;
+    vertical-align: middle;
+    word-wrap: break-word;
+}
+
+/* Zebra rows */
+.admin-table tr:nth-child(even) {
+    background: #fafafa;
+}
+
+/* Hover */
+.admin-table tr:hover td {
+    background: #f8fafc;
+}
+
+/* COLUMN WIDTH FIXES */
+.admin-table th:nth-child(1),
+.admin-table td:nth-child(1) {
+    width: 70px;
+}
+
+.admin-table th:nth-child(2),
+.admin-table td:nth-child(2) {
+    width: 32%;
+}
+
+.admin-table th:nth-child(3),
+.admin-table td:nth-child(3) {
+    width: 15%;
+}
+
+.admin-table th:nth-child(4),
+.admin-table td:nth-child(4) {
+    width: 18%;
+}
+
+.admin-table th:nth-child(5),
+.admin-table td:nth-child(5) {
+    width: 12%;
+}
+
+.admin-table th:nth-child(6),
+.admin-table td:nth-child(6) {
+    width: 160px;
+    text-align: center;
+}
+
+/* ===============================
+   ACTION BUTTONS
+================================ */
+
+.btn-delete {
+    background: #fee2e2;
+    color: #b91c1c;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: 6px;
+    transition: all 0.2s ease;
+}
+
+.btn-delete:hover {
+    background: #fecaca;
+}
+
+.btn-warning {
+    background: #fef3c7;
+    color: #92400e;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-warning:hover {
+    background: #fde68a;
+}
+
+.btn-success {
+    background: #dcfce7;
+    color: #166534;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-success:hover {
+    background: #bbf7d0;
+}
