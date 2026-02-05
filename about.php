@@ -19,7 +19,7 @@ include "header.php";
             <div class="about-content">
                 <h2>Our Story</h2>
                 <p>
-                    Outpourlife was born from a simple belief: everyone has a story worth sharing.
+                    Outpourlife was born from a simple belief: Everyone has a story worth sharing.
                 </p>
                 <p>
                     What started as a small blogging platform has grown into a vibrant community.
@@ -68,5 +68,6 @@ include "header.php";
     </div>
 
 </main>
+
 
 <?php include "footer.php"; ?>
